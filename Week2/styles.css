@@ -1,0 +1,95 @@
+* {
+    --onyx: #32373B;
+    --dark-teal: #93B7BE;
+    --light-teal: #E1FFF4;
+    --salmon: #ED6A5A;
+}
+
+body {
+    background-color: white;
+    font-weight: 400;
+}
+
+.nav-style {
+    color: var(--onyx);
+    background-color: var(--light-teal);
+    font-family: "Literata", serif;
+    font-size: 20pt;
+    line-height: 125%;
+    letter-spacing: 1.6px;
+}
+
+nav > ul > li > a, a:link {
+    color: var(--onyx);
+    text-decoration: none;
+}
+
+nav > ul > li > a, a:visited {
+    color: var(--onyx);
+    text-decoration: none;
+}
+
+nav > ul > li > a, a:hover {
+    color: var(--salmon);
+    text-decoration: none;
+}
+
+nav > ul > li > a, a:active {
+    color: var(--dark-teal);
+    text-decoration: none;
+}
+
+nav > ul {
+    list-style-type: none;
+    padding-left: 8px;
+    margin-bottom: 0%;
+}
+
+/*
+nav > table {
+    width: 100%;
+}
+*/
+
+/*
+nav > table > tr > td > a, a:visited, a:active {
+    color: var(--onyx);
+    text-decoration: none;
+}
+
+nav > table > tr > td > a, a:hover {
+    color: red;
+    text-decoration: none;
+}
+*/
+
+.heading {
+    color: var(--salmon);
+    background-color: var(--dark-teal);
+    font-family: "Mako", sans-serif;
+    font-size: 64pt;
+    line-height: 100%;
+    letter-spacing: 3.2px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+#logo {
+    width: 400px;
+}
+
+h1 {
+    background-color: var(--light-teal);
+    font-family: "Mako", sans-serif;
+    font-size: 32pt;
+    line-height: 100%;
+    letter-spacing: 3.2px;
+}
+
+.description {
+    color: var(--onyx);
+    font-family: "Literata", serif;
+    font-size: 20pt;
+    line-height: 125%;
+    letter-spacing: 1.6px;
+}
