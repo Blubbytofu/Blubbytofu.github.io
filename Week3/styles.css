@@ -1,0 +1,156 @@
+/* Box model outside in:
+    Margin
+    Border
+    Padding
+    Content
+*/
+
+/* Colors */
+* {
+    --red: #D74E3F;
+    --white: #F2F2F2;
+}
+
+body {
+    background-color: var(--white);
+    
+    margin-top: 163px;      /* to account for fixed nav bar */
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.fixed-nav {
+    z-index: 99;
+
+    background-color: var(--red);
+
+    position: fixed;
+    top: -5px;
+    left: -5px;
+
+    width: 100%;
+    margin: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    border-style: double;
+    border-color: black;
+    border-width: 5px;
+}
+
+.logo {
+    position: relative;
+    margin-left: auto;
+}
+
+#logo {
+    width: 65px;
+    height: auto;
+}
+
+.nav-child {
+    background-color: #7fffd4;
+    color: black;
+
+    margin: auto;
+    padding: 20px 40px 20px 40px;       /* top right bottom left */
+    overflow: auto;
+    border-radius: 20px;
+
+    font-family: "Literata", serif;
+    font-size: 16pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: var(--red);
+}
+
+a:active {
+    color: var(--red);
+}
+
+.generic-container {
+    background-color: beige;
+    color: black;
+
+    position: relative;
+    width: auto;
+    height: 1200px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-style: double;
+
+    padding: 20px;
+    line-height: 25px;
+    font-size: 16pt;
+}
+
+.target {
+    scroll-margin-top: 214px;       /* vertical offset to account for fixed nav bar */
+}
+
+/*
+Screen Scaling, this supports down to 320px width without content overflow
+*/
+@media only screen and (max-width: 1250px) {
+    .generic-container {
+        height: 1500px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .generic-container {
+        height: 2000px;
+        font-size: 14pt;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #logo {
+        width: 40px;
+    }
+    
+    .nav-child {
+        margin: auto;
+        padding: 10px 20px 10px 20px;       /* top right bottom left */
+        border-radius: 20px;
+    
+        font-family: "Literata", serif;
+        font-size: 12pt;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .generic-container {
+        width: auto;
+        height: 2000px;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        border-style: double;
+    
+        padding: 20px;
+        line-height: 20px;
+        font-size: 12pt;
+    }
+}
