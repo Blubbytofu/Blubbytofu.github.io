@@ -1,0 +1,47 @@
+<!--
+    Josh Peng
+    An incremental cheese clicker game.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>      <!--head-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--custom font preconnect-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="./styles.css">     <!--styling-->
+
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/cheeseButton.png">
+        <title>Cheese Tycoon</title>
+    </head>
+
+    <body>      <!--body-->
+        <div class="mainContent">
+            <div class="game">
+                <div class="neueFont" id="cheeseCounter">NULL</div>
+                <div class="neueFont" id="cheeseRate">NULL</div>
+                <img id="cheeseButton" src="./images/cheeseButton.png" alt="Cheese Button" onclick="onClickCheese()">
+            </div>
+
+            <div class="shop">
+                <div>
+                    <h1 id="shopBanner" class="neueFont">Automation Shop</h1>
+                </div>
+                <div class="shopContent">
+
+                    <!--shop contents created in gameLogic-->
+
+                </div>
+            </div>
+        </div>
+
+        <script src="./gameLogic.js"></script>      <!--script-->
+    </body>
+    
+</html>

@@ -1,0 +1,216 @@
+/*
+
+
+*/
+
+* {
+    --beige: #FFF5D7;
+    --matcha: #8AAA79;
+    --brown: #896A67;
+    --cheddar: #FFA600;
+    --cheddarHighlight: #FFBF47;
+    --green: #33FF00;
+    --red: #E80000;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.mainContent {
+    background-color: var(--beige);
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: auto;
+}
+
+#cheeseCounter {
+    font-size: 40pt;
+    text-align: center;
+}
+
+#cheeseRate {
+    font-size: 24pt;
+    text-align: center;
+}
+
+#cheeseButton {
+    margin-top: 64px;
+    width: 256px;
+    height: auto;
+}
+
+#cheeseButton:hover {
+    width: 264px;
+}
+
+#cheeseButton:active {
+    width: 288px;
+}
+
+.shop {
+    background-color: var(--matcha);
+
+    width: 25%;
+    border-width: 0px 0px 0px 4px;
+    border-style: solid;
+}
+
+#shopBanner {
+    background-color: var(--brown);
+
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-width: 0px 0px 4px 0px;
+    border-style: solid;
+
+    font-size: 32pt;
+    text-align: center;
+    letter-spacing: 0.8px;
+}
+
+.shopContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopButton {
+    background-color: var(--cheddar);
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 75%;
+    margin-top: 32px;
+    padding: 16px 12px 16px 12px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    transition: padding 0.2s;
+}
+
+.shopButton:hover {
+    background-color: var(--cheddarHighlight);
+    padding: 28px 16px 28px 16px;
+}
+
+.shopItemPic {
+    width: 64px;
+    height: auto;
+}
+
+.shopItemInfo {
+    width: 50%;
+    margin-left: -15%;
+}
+
+.shopItemName {
+    font-size: 12;
+    padding-bottom: 2px;
+}
+
+.shopItemCost {
+    font-size: 12;
+}
+
+.shopItemBought {
+    font-size: 20pt;
+    text-align: right;
+}
+
+/* could not find Baloo font so this'll have to do instead */
+.neueFont {
+    font-family: "Comic Neue", cursive;
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* responsiveness to 1500 */
+@media only screen and (max-width: 1500px) {
+    .shop {
+        width: 30%;
+    }
+    
+    #shopBanner {
+        font-size: 28pt;
+    }
+    
+    .shopItemPic {
+        width: 48px;
+    }
+
+    .shopButton {
+        font-size: 10pt;
+    }
+}
+
+/* responsiveness to 1100 */
+@media only screen and (max-width: 1100px) {
+    #cheeseCounter {
+        font-size: 32pt;
+    }
+
+    #cheeseRate {
+        font-size: 16pt;
+    }
+    
+    .shop {
+        width: 35%;
+    }
+
+    #shopBanner {
+        font-size: 24pt;
+    }
+
+    .shopItemPic {
+        width: 32px;
+    }
+
+    .shopButton {
+        font-size: 8pt;
+    }
+}
+
+/* responsiveness to 800 */
+@media only screen and (max-width: 800px) {
+    #cheeseCounter {
+        margin-top: 32px;
+    }
+
+    .mainContent {
+        display: block;
+        overflow-y: scroll;
+    }
+
+    .shop {
+        width: 100%;
+        margin-top: 64px;
+        padding-bottom: 32px;
+        border-left: 0px;
+        height: 100%;
+    }
+
+    #shopBanner {
+        border-width: 4px 0px 4px 0px;
+    }
+
+    .shopButton {
+        font-size: 10pt;
+    }
+}
