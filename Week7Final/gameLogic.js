@@ -124,13 +124,22 @@ let clickPower = 1;                     // cheese gained from clicking
 const formatChangePoint = 999999;       // point at which numbers are formatted in exp instead
 
 /*                                      name                cost        growth  gains   pic                     growth func         gains func  */
-const clickButton =     new ShopButton("Click Power",       100,        -1.0,   2,      "./images/cursor.png",  piecewiseGrowth,    activeGain);
+const clickButton =     new ShopButton("Click Power",       100,        5.0,    2,      "./images/cursor.png",  expGrowth,          activeGain);
+const ratButton =       new ShopButton("Trained Rat",       15,         1.1,    1,      "./images/rat.png",     expGrowth,          passiveGain);
+const manButton =       new ShopButton("Italian Person",    80,         1.1,    8,      "./images/man.png",     expGrowth,          passiveGain);
+const cannonButton =    new ShopButton("Cheese Cannon",     1200,       1.1,    45,     "./images/cannon.png",  expGrowth,          passiveGain);
+const factoryButton =   new ShopButton("Cheese Factory",    14000,      1.1,    379,    "./images/factory.png", expGrowth,          passiveGain);
+const wizardButton =    new ShopButton("Nacho-mancer",      125000,     1.1,    1333,   "./images/wizard.png",  expGrowth,          passiveGain);
+const raptureButton =   new ShopButton("Cheese Rapture",    1000000,    1.1,    7999,   "./images/rapture.png", expGrowth,          passiveGain);
+/*      unbalanced
+const clickButton =     new ShopButton("Click Power",       100,        0.0,    2,      "./images/cursor.png",  piecewiseGrowth,    activeGain);
 const ratButton =       new ShopButton("Trained Rat",       15,         1.1,    1,      "./images/rat.png",     expGrowth,          passiveGain);
 const manButton =       new ShopButton("Italian Person",    100,        1.12,   3,      "./images/man.png",     expGrowth,          passiveGain);
 const cannonButton =    new ShopButton("Cheese Cannon",     1200,       1.14,   8,      "./images/cannon.png",  expGrowth,          passiveGain);
 const factoryButton =   new ShopButton("Cheese Factory",    14000,      1.16,   45,     "./images/factory.png", expGrowth,          passiveGain);
 const wizardButton =    new ShopButton("Nacho-mancer",      160000,     1.18,   256,    "./images/wizard.png",  expGrowth,          passiveGain);
 const raptureButton =   new ShopButton("Cheese Rapture",    1000000,    1.20,   1333,   "./images/rapture.png", expGrowth,          passiveGain);
+*/
 
 function main() {
     updateCheeseText();     // first time init
