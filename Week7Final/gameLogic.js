@@ -32,7 +32,10 @@ class ShopButton {
         <div class="shopItemBought">00</div>
     </div>
     */
-    makeButton() {      // this method was imagined, syntax for attaching a function was vibecoded lol
+    makeButton() {
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+        // https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
+        // https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
         const nButton = document.createElement("div");
         nButton.classList.add("shopButton", "neueFont");
     
@@ -65,6 +68,26 @@ class ShopButton {
     
         // assign a onclick function that can update the instance variables of this object
         nButton.onclick = () => { this.handleClick(); };        // don't know this syntax but it works
+        // https://stackoverflow.com/questions/13286233/pass-a-javascript-function-as-parameter
+        /*
+        ChatGPT
+        Input: js class ShopButton, pass in function for constructor that can access its other instance variables and assign to onclick in constructor
+        Output:
+        Got it — you want a JavaScript class ShopButton where you pass a function into the constructor, and that function should be able to access instance variables of the ShopButton — and you also want it assigned to onclick inside the constructor.
+
+        Here's how you'd do that:
+
+        class MyButton {
+            constructor(name, action) {
+                this.name = name;
+                
+                // Bind the action to this instance
+                this.buttonElement.onclick = () => {
+                    action(this);
+                };
+            }
+        }
+        */
 
         return nButton;
     }
@@ -131,6 +154,7 @@ const cannonButton =    new ShopButton("Cheese Cannon",     1200,       1.1,    
 const factoryButton =   new ShopButton("Cheese Factory",    14000,      1.1,    379,    "./images/factory.png", expGrowth,          passiveGain);
 const wizardButton =    new ShopButton("Nacho-mancer",      125000,     1.1,    1333,   "./images/wizard.png",  expGrowth,          passiveGain);
 const raptureButton =   new ShopButton("Cheese Rapture",    1000000,    1.1,    7999,   "./images/rapture.png", expGrowth,          passiveGain);
+
 /*      unbalanced
 const clickButton =     new ShopButton("Click Power",       100,        0.0,    2,      "./images/cursor.png",  piecewiseGrowth,    activeGain);
 const ratButton =       new ShopButton("Trained Rat",       15,         1.1,    1,      "./images/rat.png",     expGrowth,          passiveGain);

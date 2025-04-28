@@ -19,6 +19,7 @@ body {
 
     user-select: none;      /* stops user from being able to select elements by dragging the mouse */
     /* apparently may not work on outdated browsers */
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/user-select */
 }
 
 .mainContent {
